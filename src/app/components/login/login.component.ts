@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    // To check if we are logged in
     this.authService.getAuth().subscribe((auth) => {
       if (auth) {
         this.router.navigate(['/']);
